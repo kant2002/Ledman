@@ -44,6 +44,9 @@
     <Content Include="lib\msvcr100.dll" />
     <Content Include="lib\SiUSBXp.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Ledman.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>xcopy /y "$(ProjectDir)lib\*.dll" "$(TargetDir)"</PreBuildEvent>
