@@ -37,19 +37,15 @@
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="lib\LED_Setup_Interface.dll" />
-    <Content Include="lib\mfc100u.dll" />
-    <Content Include="lib\msvcp100.dll" />
-    <Content Include="lib\msvcr100.dll" />
-    <Content Include="lib\SiUSBXp.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Ledman.nuspec" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>xcopy /y "$(ProjectDir)lib\*.dll" "$(TargetDir)"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(SolutionDir)Nuget\lib" md "$(SolutionDir)Nuget\lib"
+xcopy /y "$(TargetPath)" "$(SolutionDir)Nuget\lib"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
