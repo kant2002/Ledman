@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Codevision.Ledman</id>
-    <version>0.0.8</version>
+    <version>0.1.0</version>
     <title>Codevision.Ledman</title>
     <authors>Andrey Kurdyumov</authors>
     <owners>Andrey Kurdyumov</owners>
@@ -12,7 +12,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Interface library to the Ledman.cn senders</description>
     <releaseNotes>Initial release of the package.</releaseNotes>
-    <copyright>Copyright Andrey Kurdyumov 2016</copyright>
+    <copyright>Copyright © Andrey Kurdyumov 2016</copyright>
     <tags>Ledman Sender</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.1">
+      </group>
+      <group targetFramework=".NETStandard1.1">
+        <dependency id="System.Runtime.InteropServices" version="4.1.0" />
+      </group>
+    </dependencies>
   </metadata>
 </package>
